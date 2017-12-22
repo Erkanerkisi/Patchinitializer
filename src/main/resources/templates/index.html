@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css"/> 
+
+
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-4 jumbotron">
+				<div class="col-md-12 dialog-demo-content">
+					<div ui-view="newPatch"></div>
+				</div>
+			</div>
+
+
+			<div class="col-md-8 ">
+
+				<div ui-view="svntab"></div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- 	<div class="container" class="md-padding" ng-cloak> -->
+	<!-- 		<div class="row"> -->
+	<!-- 			<div class="col-md-3 dialog-demo-content"> -->
+	<!-- 				<div ui-view="newPatch"></div> -->
+	<!-- 			</div> -->
+
+	<!-- 			<div class="col-md-2"></div> -->
+
+
+
+	<!-- 			<div class="col-md-3"> -->
+	<!-- 				<div ui-view="svntab"></div> -->
+	<!-- 			</div> -->
+	<!-- 		</div> -->
+	<!-- 	</div> -->
+
+
+
+
+	<!-- *************************   SCRIPTS  ********************************** -->
+	<script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+		
+	</script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+
+	<script src="js/app.js"></script>
+	<script src="js/patch.controller.js"></script>
+	<script src="js/svn.controller.js"></script>
+	
+
+</body>
+
+</html>

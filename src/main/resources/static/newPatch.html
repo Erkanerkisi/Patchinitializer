@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<form ng-submit="Create()" name="frm">
+		<label>File Location</label> <input type="text" class="form-control"
+			placeholder="C:\Erkan\" ng-model="patch.destination" required /> <br />
+		Commit SVN as well <input type="checkbox" ng-model="patch.checked"
+			ng-init="patch.checked=false"> <br /> <label>File
+			SVN Location</label> <input type="text" ng-disabled="patch.checked == false"
+			class="form-control" ng-required="patch.checked"
+			ng-model="patch.svnPath" /> <label>Username</label> <input
+			type="text" class="form-control" ng-disabled="patch.checked == false"
+			ng-required="patch.checked" ng-model="patch.user.userName" /> <label>Password</label>
+		<input type="password" ng-disabled="patch.checked == false"
+			class="form-control" ng-required="patch.checked"
+			ng-model="patch.user.password" /> <label>WinApproach Number</label>
+		<input type="number" class="form-control" ng-model="patch.winNum"
+			required /> <label>WinApproach Name</label> <input type="text"
+			class="form-control" ng-model="patch.winName" required /> <label
+			for="FormControlTextarea1">What Changed</label>
+		<textarea class="form-control" ng-model="patch.detail"
+			id="FormControlTextarea1" rows="3" required></textarea>
+		<br />
+		<md-button class="md-primary md-raised" ng-click="showConfirm($event)"
+			ng-disabled="frm.$invalid"> Create Folder </md-button>
+		<!-- 			<button class="btn btn-info" ng-disabled="frm.$invalid"> -->
+		<!-- 				Create</button> -->
+
+
+		<br /> <br /> <br />
+
+		<div ng-if="errorCode == 'OK'">
+			<div class="alert alert-success">
+				<strong>Success!</strong> Folder has been created
+			</div>
+		</div>
+
+		<div ng-if="errorCode == 'ER'">
+			<div class="alert alert-danger">
+				<strong>Danger!</strong> {{errorMessage}}
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>
